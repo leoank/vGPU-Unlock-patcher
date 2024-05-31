@@ -553,6 +553,7 @@ if $DO_VGPU; then
     applypatch ${TARGET} vcfg-v15vcs.patch
     applypatch ${TARGET} vcfg-testing.patch
     applypatch ${TARGET} verbose-firmware-load.patch
+    vcfgclone ${TARGET}/vgpuConfig.xml 0x26B1 0x16A1 0x10DE 0x0000	# RTX A6000 Ada
     vcfgclone ${TARGET}/vgpuConfig.xml 0x1E30 0x12BA 0x1E07 0x0000	# RTX 2080 Ti
     vcfgclone ${TARGET}/vgpuConfig.xml 0x1E30 0x12BA 0x1E84 0x0000	# RTX 2070 super 8GB
     vcfgclone ${TARGET}/vgpuConfig.xml 0x1E30 0x12BA 0x1E81 0x0000	# RTX 2080 super 8GB
